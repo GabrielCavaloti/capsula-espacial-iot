@@ -60,7 +60,6 @@ O display mostra continuamente as três medições e a situação geral da cáps
 - `sketch.ino`: código do Arduino.
 - `diagram.json`: componentes e ligações do circuito no Wokwi.
 - `libraries.txt`: bibliotecas usadas pela simulação.
-- `ROTEIRO_VIDEO.md`: roteiro para o vídeo de até três minutos.
 
 ## Como executar
 
