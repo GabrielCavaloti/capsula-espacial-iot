@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "author": "Gabriel Castilla Cavaloti",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 20, "left": 20, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": 20, "left": 370, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-dht22", "id": "dht", "top": 190, "left": 420, "attrs": { "temperature": "24", "humidity": "40" } },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr", "top": 315, "left": 405, "attrs": { "lux": "500" } },
+    { "type": "wokwi-mpu6050", "id": "mpu", "top": 450, "left": 390, "attrs": {} },
+    { "type": "wokwi-led", "id": "ledVerde", "top": 390, "left": 15, "attrs": { "color": "green", "label": "Normal" } },
+    { "type": "wokwi-led", "id": "ledAmarelo", "top": 390, "left": 95, "attrs": { "color": "yellow", "label": "Atencao" } },
+    { "type": "wokwi-led", "id": "ledVermelho", "top": 390, "left": 185, "attrs": { "color": "red", "label": "Critico" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 455, "left": 25, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 455, "left": 105, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r3", "top": 455, "left": 195, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 520, "left": 270, "attrs": { "volume": "0.1" } }
+  ],
+  "connections": [
+    [ "dht:VCC", "uno:5V", "red", [] ],
+    [ "dht:GND", "uno:GND.1", "black", [] ],
+    [ "dht:SDA", "uno:2", "green", [] ],
+
+    [ "ldr:VCC", "uno:5V", "red", [] ],
+    [ "ldr:GND", "uno:GND.1", "black", [] ],
+    [ "ldr:AO", "uno:A0", "blue", [] ],
+
+    [ "lcd:VCC", "uno:5V", "red", [] ],
+    [ "lcd:GND", "uno:GND.1", "black", [] ],
+    [ "lcd:SDA", "uno:A4", "blue", [] ],
+    [ "lcd:SCL", "uno:A5", "yellow", [] ],
+
+    [ "mpu:VCC", "uno:5V", "red", [] ],
+    [ "mpu:GND", "uno:GND.1", "black", [] ],
+    [ "mpu:SDA", "uno:A4", "blue", [] ],
+    [ "mpu:SCL", "uno:A5", "yellow", [] ],
+
+    [ "uno:8", "r1:1", "green", [] ],
+    [ "r1:2", "ledVerde:A", "green", [] ],
+    [ "ledVerde:C", "uno:GND.1", "black", [] ],
+
+    [ "uno:9", "r2:1", "yellow", [] ],
+    [ "r2:2", "ledAmarelo:A", "yellow", [] ],
+    [ "ledAmarelo:C", "uno:GND.1", "black", [] ],
+
+    [ "uno:10", "r3:1", "red", [] ],
+    [ "r3:2", "ledVermelho:A", "red", [] ],
+    [ "ledVermelho:C", "uno:GND.1", "black", [] ],
+
+    [ "buzzer:1", "uno:11", "purple", [] ],
+    [ "buzzer:2", "uno:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}
