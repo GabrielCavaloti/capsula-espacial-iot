@@ -27,6 +27,14 @@ O display mostra continuamente as três medições e a situação geral da cáps
 - `ATENCAO`: LED amarelo aceso.
 - `CRITICO`: LED vermelho e buzzer ativados.
 
+## Diagrama do circuito
+
+![Diagrama do circuito](assets/diagrama_circuito.svg)
+
+## Estados do monitoramento
+
+![Estados normal, atenção e crítico](assets/estados_monitoramento.svg)
+
 ## Limites utilizados
 
 ### Temperatura
