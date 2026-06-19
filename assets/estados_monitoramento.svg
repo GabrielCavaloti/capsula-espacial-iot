@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620">
+  <rect width="1400" height="620" fill="#f5f7fa"/>
+  <text x="70" y="70" font-family="Arial" font-size="34" font-weight="bold" fill="#20242a">Estados do monitoramento</text>
+  <text x="70" y="108" font-family="Arial" font-size="19" fill="#59636e">Exemplo de resposta visual do display, LEDs e buzzer</text>
+
+  <g transform="translate(65,160)">
+    <rect width="390" height="340" rx="22" fill="white" stroke="#43a047" stroke-width="5"/>
+    <text x="195" y="48" text-anchor="middle" font-family="Arial" font-size="27" font-weight="bold" fill="#2e7d32">NORMAL</text>
+    <rect x="42" y="80" width="306" height="125" rx="10" fill="#102d20" stroke="#20242a" stroke-width="5"/>
+    <text x="62" y="130" font-family="monospace" font-size="25" fill="#9cffb8">T:24.0C L:50%</text>
+    <text x="62" y="173" font-family="monospace" font-size="25" fill="#9cffb8">V:0.2 NORMAL</text>
+    <circle cx="195" cy="265" r="32" fill="#43a047"/>
+    <text x="195" y="322" text-anchor="middle" font-family="Arial" font-size="18" fill="#59636e">LED verde • buzzer desligado</text>
+  </g>
+
+  <g transform="translate(505,160)">
+    <rect width="390" height="340" rx="22" fill="white" stroke="#f9a825" stroke-width="5"/>
+    <text x="195" y="48" text-anchor="middle" font-family="Arial" font-size="27" font-weight="bold" fill="#ef6c00">ATENÇÃO</text>
+    <rect x="42" y="80" width="306" height="125" rx="10" fill="#332a0d" stroke="#20242a" stroke-width="5"/>
+    <text x="62" y="130" font-family="monospace" font-size="25" fill="#ffe082">T:32.0C L:50%</text>
+    <text x="62" y="173" font-family="monospace" font-size="25" fill="#ffe082">V:0.3 ATENCAO</text>
+    <circle cx="195" cy="265" r="32" fill="#fdd835"/>
+    <text x="195" y="322" text-anchor="middle" font-family="Arial" font-size="18" fill="#59636e">LED amarelo • buzzer desligado</text>
+  </g>
+
+  <g transform="translate(945,160)">
+    <rect width="390" height="340" rx="22" fill="white" stroke="#e53935" stroke-width="5"/>
+    <text x="195" y="48" text-anchor="middle" font-family="Arial" font-size="27" font-weight="bold" fill="#c62828">CRÍTICO</text>
+    <rect x="42" y="80" width="306" height="125" rx="10" fill="#351111" stroke="#20242a" stroke-width="5"/>
+    <text x="62" y="130" font-family="monospace" font-size="25" fill="#ff8a80">T:38.0C L:50%</text>
+    <text x="62" y="173" font-family="monospace" font-size="25" fill="#ff8a80">V:0.3 CRITICO</text>
+    <circle cx="195" cy="265" r="32" fill="#e53935"/>
+    <text x="195" y="322" text-anchor="middle" font-family="Arial" font-size="18" fill="#59636e">LED vermelho • buzzer ligado</text>
+  </g>
+
+  <text x="700" y="570" text-anchor="middle" font-family="Arial" font-size="18" fill="#59636e">Os limites podem ser testados alterando os sensores durante a simulação.</text>
+</svg>
